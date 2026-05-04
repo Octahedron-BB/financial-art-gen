@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Workspace / IDE
+.vscode/
+.idea/
+.gemini/
+
+# Project Specific
+# We actually want to track data.js so GitHub Pages works immediately,
+# but if it was very large we might ignore it. For this project, we keep it.

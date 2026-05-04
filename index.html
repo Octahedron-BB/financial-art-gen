@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Data Generative Art</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- Main UI Panel -->
+    <div id="ui-overlay">
+        <button id="toggle-ui" class="panel-toggle" title="Collapse panel">‹</button>
+        <div class="panel-content" id="ui-content">
+        <h1 class="title">Financial Art Generator</h1>
+        <p class="subtitle" id="subtitle">Visualizing BTC-USD with Op Art Geometry</p>
+        <div class="controls">
+            <div class="control-group">
+                <label for="asset-search">Asset (Search):</label>
+                <div class="search-wrapper">
+                    <input type="text" id="asset-search" value="BTC-USD" autocomplete="off" class="styled-input">
+                    <div id="search-dropdown" class="custom-dropdown"></div>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="mode-select">Art Mode:</label>
+                <select id="mode-select" class="styled-input">
+                    <option value="modeA">Mode A: Op Art Geometry</option>
+                    <option value="modeB">Mode B: Fluid Particles</option>
+                    <option value="modeC">Mode C: Fractal Mandala</option>
+                    <option value="modeD">Mode D: Op Art Interference</option>
+                    <option value="modeE">Mode E: Action Painting (Pollock)</option>
+                    <option value="modeF">Mode F: Color Field (Rothko)</option>
+                    <option value="modeG">Mode G: Digital Impressionism</option>
+                </select>
+            </div>
+            <div class="button-row">
+                <button id="render-btn">Render</button>
+                <button id="random-btn" class="btn-secondary">🎲 Random</button>
+                <button id="save-btn" class="btn-secondary">💾 Save PNG</button>
+            </div>
+            <div class="button-row">
+                <button id="share-btn" class="btn-tertiary">🔗 Copy Share Link</button>
+            </div>
+        </div>
+        <div class="shortcuts-hint">
+            <span>F: Fullscreen</span> <span>←→: Asset</span> <span>↑↓: Mode</span>
+        </div>
+        </div>
+    </div>
+
+    <!-- History Sidebar -->
+    <div id="history-panel">
+        <button id="toggle-history" class="panel-toggle panel-toggle-right" title="Collapse panel">›</button>
+        <div class="panel-content" id="history-content">
+        <div class="history-title">History</div>
+        <div id="history-list"></div>
+        </div>
+    </div>
+
+    <!-- Data Tooltip -->
+    <div id="data-tooltip">
+        <span class="date" id="tooltip-date"></span>
+        <span class="price" id="tooltip-price"></span>
+        <div class="metrics">
+            <span id="tooltip-rsi"></span>
+            <span id="tooltip-macd"></span>
+        </div>
+    </div>
+
+    <div id="canvas-container"></div>
+    <script src="data.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
