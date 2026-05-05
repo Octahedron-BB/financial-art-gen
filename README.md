@@ -2,6 +2,8 @@
 
 An interactive 2D generative art platform that transforms financial market trends into stunning, abstract visual masterpieces. Built with **p5.js** for high-performance rendering and **Python** for data synthesis.
 
+[Demo](https://octahedron-bb.github.io/financial-art-gen/)
+
 ## ✨ Features
 
 -   **7 Unique Art Modes**:
